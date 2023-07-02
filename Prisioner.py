@@ -14,18 +14,20 @@ PRISIONERS_TYPES = {
     "EGOISTA": 2,  # sempre delata
 } 
 
-# Calcula o indice de Gini
-def compute_gini(model):
-    agent_wealths = [agent.jail_time for agent in model.schedule.agents]
-    x = sorted(agent_wealths)
-    N = model.num_agents
-    B = sum( xi * (N-i) for i,xi in enumerate(x) ) / (N*sum(x))
-    return (1 + (1/N) - 2*B)
-    
+# Calcula a porcentagem de agentes que escolheram não delatar
+def compute_autruista(model):
+    agents_type = [agent.type for agent in model.schedule.agents]
+    total_agents = len(agents_type)
+    autruistas = 0
+    for i in agents_type:
+        if i == "AUTRUISTA":
+            autruistas += 1
+    return autruistas / total_agents
+   
 class PrisonerAgent(Agent):
     def __init__(self, unique_id, model, type):
         super().__init__(unique_id, model)
-        self.jail_time = 0
+        self.jail_time = 1
         self.denounced_list = []
         self.type = type
 
@@ -107,10 +109,10 @@ class PrisonerModel(Model):
         
         # Cria um coletor de dados
         self.datacollector = DataCollector(
-            model_reporters={"Gini": compute_gini},
-            agent_reporters={"Wealth": "wealth"},
-        )
+            # Função que calcula a porcentagem de agentes que escolheram não delatar
+            model_reporters={"Autruistas": compute_autruista}
+            )
 
     def step(self):
+        self.datacollector.collect(self)
         self.schedule.step()
-
