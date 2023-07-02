@@ -3,16 +3,35 @@ from mesa import Model, Agent
 from mesa.time import RandomActivation
 from mesa.space import SingleGrid, MultiGrid
 from mesa.datacollection import DataCollector
+from mesa.visualization.ModularVisualization import VisualizationElement
+from mesa.visualization.modules import CanvasGrid
+import tkinter as tk
 
-GRID_WIDTH = 30
-GRID_HEIGHT = 30
+GRID_WIDTH = 800
+GRID_HEIGHT = 800
 
-PRISIONERS_PER_TYPE = 100
+PRISIONERS_PER_TYPE = 150
 
 PRISIONERS_TYPES = {
     "AUTRUISTA": 1,  # não delata
     "EGOISTA": 2,  # sempre delata
-} 
+}
+
+
+class SlideButtonElement(VisualizationElement):
+    package_includes = []
+    local_includes = []
+
+    def __init__(self, value):
+        self.value = value
+
+    def render(self):
+        canvas = tk.Canvas(self)
+        canvas.create_rectangle(0, 0, 100, 20, fill="gray")
+        button_x = int(self.value * 100)
+        canvas.create_oval(button_x - 5, 5, button_x + 5, 15, fill="red")
+        return canvas
+
 
 # Calcula a porcentagem de agentes que escolheram não delatar
 def compute_autruista(model):
@@ -23,11 +42,12 @@ def compute_autruista(model):
         if i == "AUTRUISTA":
             autruistas += 1
     return autruistas / total_agents
-   
+
+
 class PrisonerAgent(Agent):
     def __init__(self, unique_id, model, type):
         super().__init__(unique_id, model)
-        self.jail_time = 1
+        self.jail_time = 0
         self.denounced_list = []
         self.type = type
 
@@ -89,7 +109,8 @@ class PrisonerAgent(Agent):
 
         if best_type != self.type:
             self.type = best_type
-        
+
+
 class PrisonerModel(Model):
     def __init__(self, num_agents, width, height):
         self.num_agents = num_agents
@@ -99,20 +120,24 @@ class PrisonerModel(Model):
 
         index = 0
         for type in PRISIONERS_TYPES:
-            for i in range(PRISIONERS_PER_TYPE):
+            for _ in range(num_agents):
                 a = PrisonerAgent(index, self, type)
                 self.schedule.add(a)
                 x = self.random.randrange(self.grid.width)
                 y = self.random.randrange(self.grid.height)
                 self.grid.place_agent(a, (x, y))
                 index += 1
-        
+
         # Cria um coletor de dados
         self.datacollector = DataCollector(
             # Função que calcula a porcentagem de agentes que escolheram não delatar
             model_reporters={"Autruistas": compute_autruista}
-            )
+        )
 
     def step(self):
         self.datacollector.collect(self)
         self.schedule.step()
+
+    def set_prisoners_per_type(self, value):
+        global PRISIONERS_PER_TYPE
+        PRISIONERS_PER_TYPE = value

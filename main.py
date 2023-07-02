@@ -1,7 +1,17 @@
-from Prisioner import PrisonerModel, GRID_WIDTH, GRID_HEIGHT, PRISIONERS_TYPES
+from Prisioner import (
+    PrisonerModel,
+    PRISIONERS_TYPES,
+)
 from mesa.visualization.modules import CanvasGrid
 from mesa.visualization.ModularVisualization import ModularServer
 from mesa.visualization.modules import ChartModule
+from mesa import Model, Agent
+from mesa.visualization.ModularVisualization import UserSettableParameter
+
+GRID_SIZE = 50
+GRID_X_SIZE = 800
+GRID_Y_SIZE = 800
+CANVAS_SIZE = 300
 
 
 def agent_portrayal(agent):
@@ -16,19 +26,50 @@ def agent_portrayal(agent):
 
     return portrayal
 
-grid = CanvasGrid(agent_portrayal, GRID_WIDTH, GRID_HEIGHT, 860, 860)
 
-chart = ChartModule([{
-    "Label": "Autruistas",
-    "Color": "Black"}],
-    data_collector_name='datacollector',
-    )
+SIMULATION_PARAMS = {
+    "num_agents": UserSettableParameter(
+        "slider",
+        name="Quantidade de Agentes Vivos",
+        value=200,
+        min_value=50,
+        max_value=200,
+        step=1,
+        description="",
+    ),
+    "width": UserSettableParameter(
+        "slider",
+        name="Largura do quadro",
+        value=GRID_SIZE,
+        min_value=GRID_SIZE - 30,
+        max_value=GRID_SIZE,
+        step=1,
+        description="",
+    ),
+    "height": UserSettableParameter(
+        "slider",
+        name="Comprimento do quadro",
+        value=GRID_SIZE,
+        min_value=GRID_SIZE - 30,
+        max_value=GRID_SIZE,
+        step=1,
+        description="",
+    ),
+}
+
+
+grid = CanvasGrid(agent_portrayal, GRID_SIZE, GRID_SIZE, GRID_X_SIZE, GRID_Y_SIZE)
+
+chart = ChartModule(
+    [{"Label": "Autruistas", "Color": "Black"}],
+    data_collector_name="datacollector",
+)
 
 server = ModularServer(
     PrisonerModel,
     [grid, chart],
     "Prisioner Model",
-    {"num_agents": 50, "width": 30, "height": 30},
+    SIMULATION_PARAMS,
 )
 
 server.port = 8521
