@@ -16,14 +16,19 @@ def agent_portrayal(agent):
 
     return portrayal
 
+grid = CanvasGrid(agent_portrayal, GRID_WIDTH, GRID_HEIGHT, 860, 860)
 
-grid = CanvasGrid(agent_portrayal, GRID_WIDTH, GRID_HEIGHT, 600, 600)
+chart = ChartModule([{
+    "Label": "Gini",
+    "Color": "Black"}],
+    data_collector_name='datacollector')
 
 server = ModularServer(
     PrisonerModel,
-    [grid],
+    [grid, chart],
     "Prisioner Model",
     {"num_agents": 50, "width": 30, "height": 30},
 )
+
 server.port = 8521
 server.launch()

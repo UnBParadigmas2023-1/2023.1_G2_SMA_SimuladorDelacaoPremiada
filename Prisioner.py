@@ -2,6 +2,7 @@ import random
 from mesa import Model, Agent
 from mesa.time import RandomActivation
 from mesa.space import SingleGrid, MultiGrid
+from mesa.datacollection import DataCollector
 
 GRID_WIDTH = 30
 GRID_HEIGHT = 30
@@ -11,9 +12,16 @@ PRISIONERS_PER_TYPE = 100
 PRISIONERS_TYPES = {
     "AUTRUISTA": 1,  # não delata
     "EGOISTA": 2,  # sempre delata
-}
+} 
 
-
+# Calcula o indice de Gini
+def compute_gini(model):
+    agent_wealths = [agent.jail_time for agent in model.schedule.agents]
+    x = sorted(agent_wealths)
+    N = model.num_agents
+    B = sum( xi * (N-i) for i,xi in enumerate(x) ) / (N*sum(x))
+    return (1 + (1/N) - 2*B)
+    
 class PrisonerAgent(Agent):
     def __init__(self, unique_id, model, type):
         super().__init__(unique_id, model)
@@ -79,8 +87,7 @@ class PrisonerAgent(Agent):
 
         if best_type != self.type:
             self.type = best_type
-
-
+        
 class PrisonerModel(Model):
     def __init__(self, num_agents, width, height):
         self.num_agents = num_agents
@@ -97,6 +104,13 @@ class PrisonerModel(Model):
                 y = self.random.randrange(self.grid.height)
                 self.grid.place_agent(a, (x, y))
                 index += 1
+        
+        # Cria um coletor de dados
+        self.datacollector = DataCollector(
+            model_reporters={"Gini": compute_gini},
+            agent_reporters={"Wealth": "wealth"},
+        )
 
     def step(self):
         self.schedule.step()
+
