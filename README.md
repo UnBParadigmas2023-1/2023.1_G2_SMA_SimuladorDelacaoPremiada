@@ -90,6 +90,9 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | Gustavo Martins Ribeiro | Participação ativa das reuniões de definição de escopo e das reuniões de desenvolvimento; Auxilio geral e elaboração do Gráfico de Linhas contendo a porcentagem de autruistas em relação ao total de agentes. | Excelente |
 | Matheus Calixto Vaz Pinheiro | Minha participação no projeto foi no desenvolvimento dos Agentes em conjunto do Brenno e do Rafael. Gostei bastante do desenvolvimento pois pude aprender junto do Rafael e Brenno, pois entramos em call no discord e utilizamos o live share para que conseguissemos escrever o código paralelamente, isto também fez com que a todo momento os três se juntassem para pensar em como definir cada aspecto do código e o comportamento do mesmo. De inicio erramos colocando um tipo a mais de Agente o que fez com que o "Dilema do Priosioneiro" não fosse devidamente representado, mas após a retirada do mesmo tivemos uma ótima simulação. No mais achei o paradigma interessantíssimo e o uso do framework MESA muito bom por sua curva de aprendizagem baixa. | Boa | 
 
+## Trabalhos Futuros
+Uma possível adição para o trabalho futuro seria implementar um terceiro agente flexível onde ele siga a estratégia da teoria dos jogos de "olho por olho, dente por dente", ou seja, esse agente imita a ação do outro (delatar ou negar). Além disso seria interessante indicar por qual motivo ele ganhou: ganhou por delatar o colega? ganhou por negar? Adicionalmente, qual deria o comportamento caso um agente flexivel encontrasse outro flexível?
+
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
 (i) Lições Aprendidas;
 (ii) Percepções;
