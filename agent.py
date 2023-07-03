@@ -1,17 +1,5 @@
-import random
-from mesa import Model, Agent
-from mesa.time import RandomActivation
-from mesa.space import SingleGrid, MultiGrid
-
-GRID_WIDTH = 30
-GRID_HEIGHT = 30
-
-PRISIONERS_PER_TYPE = 100
-
-PRISIONERS_TYPES = {
-    "AUTRUISTA": 1,  # não delata
-    "EGOISTA": 2,  # sempre delata
-}
+from mesa import Agent
+from params import GRID_X_SIZE, GRID_Y_SIZE, PRISIONERS_TYPES
 
 
 class PrisonerAgent(Agent):
@@ -43,7 +31,7 @@ class PrisonerAgent(Agent):
         for pos in adjacent_positions:
             x, y = pos
             if (
-                0 <= x < GRID_WIDTH and 0 <= y < GRID_HEIGHT
+                0 <= x < GRID_X_SIZE and 0 <= y < GRID_Y_SIZE
             ):  # Verifica se a posição é válida na grade
                 agent = self.model.grid[x][
                     y
@@ -70,7 +58,7 @@ class PrisonerAgent(Agent):
                     self.jail_time = self.jail_time + 5
                 else:
                     self.jail_time = self.jail_time
-        else:  # caso do comportamento ser AUTRUISTA
+        else:  # caso do comportamento ser AlTRUISTA
             for agent in adjacent_agents:
                 if self in agent.denounced_list:
                     self.jail_time = self.jail_time + 10
@@ -79,24 +67,3 @@ class PrisonerAgent(Agent):
 
         if best_type != self.type:
             self.type = best_type
-
-
-class PrisonerModel(Model):
-    def __init__(self, num_agents, width, height):
-        self.num_agents = num_agents
-        self.schedule = RandomActivation(self)
-        self.grid = MultiGrid(width, height, False)
-        self.running = True
-
-        index = 0
-        for type in PRISIONERS_TYPES:
-            for i in range(PRISIONERS_PER_TYPE):
-                a = PrisonerAgent(index, self, type)
-                self.schedule.add(a)
-                x = self.random.randrange(self.grid.width)
-                y = self.random.randrange(self.grid.height)
-                self.grid.place_agent(a, (x, y))
-                index += 1
-
-    def step(self):
-        self.schedule.step()
