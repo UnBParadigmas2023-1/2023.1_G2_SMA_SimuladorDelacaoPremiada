@@ -35,11 +35,13 @@ Para auxiliar na visualização da estratégia predominante, adicionamos um grá
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Linguagens**: Python 3
-**Tecnologias**: Framework MESA
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
-Gifs animados e outras ilustrações são bem-vindos!
+**Linguagens**: Python 3<br>
+**Tecnologias**: Framework MESA<br>
+
+Para instalar o framework MESA basta rodar o comando 
+```
+pip install mesa
+````
 
 ## Uso 
 ### Como executar
