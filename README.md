@@ -35,16 +35,20 @@ Para auxiliar na visualização da estratégia predominante, adicionamos um grá
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
+**Linguagens**: Python 3
+**Tecnologias**: Framework MESA
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 Gifs animados e outras ilustrações são bem-vindos!
 
 ## Uso 
-Explique como usar seu projeto.
-Procure ilustrar em passos, com apoio de telas do software, seja com base na interface gráfica, seja com base no terminal.
-Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
+### Como executar
+1 - Clone este repositório em sua máquina local.<br>
+2 - Execute o arquivo principal main.py utilizando o interpretador Python.
+```
+python simulation.py
+````
+3 - Acompanhe a simulação em http://127.0.0.1:8521
 
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto.
@@ -70,5 +74,4 @@ Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não es
 (iV) Trabalhos Futuros.
 
 ## Fontes
-Referencie, adequadamente, as referências utilizadas.
-Indique ainda sobre fontes de leitura complementares.
+[Dilema do prisioneiro - WikiPédia](https://pt.wikipedia.org/wiki/Dilema_do_prisioneiro)
