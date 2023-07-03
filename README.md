@@ -1,7 +1,7 @@
 # Simulador de Delação Premiada
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
-**Grupo 2**: XX<br>
+**Grupo**: 02<br>
 **Paradigma**: SMA<br>
 
 ## Alunos
@@ -79,9 +79,8 @@ TEMPO: +/- 15min
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
-| Fulano | Programação dos Fatos da Base de Conhecimento Lógica | Boa |
-
-## Outros
+| Rafael Berto Pereira | Eu contribuí no desenvolvimento dos Agentes em conjunto com o Brenno e o Matheus. No começo senti dificuldade no uso do construtor dos agentes. Após essa dificuldade superada, ajudei a programar o comportamento dos agentes. Inicialmente tinha pensado em três comportamentos flexível, autruista e egoísta. Entretanto, com o tempo percebeu que o flexível sempre ganhava a longo prazo. Além disso não tinha como saber se ele ganhoou porque foi autruista ou egoista. Achei esse paradigma muito interessante ver que cada agente tinha um comportamento independente. Além disso, o uso do Framework MESA, em python, facilitou bastante a curva de aprendizado | Boa |
+|Lucas Pimentel | Ajudei a equipe na idealização do projeto e na pesquisa de base teórica para a realização dele. Além disso, atuei em conjunto com o Victor Lima e o Eurico Abreu na implementação da classe Model. Também consegui auxiliar no desenvolvimento do Agente em si, revisando a lógica implementada e fazendo algumas alterações. Acredito que este trabalho tenha sido de grande importância para a compreensão do paradigma, por mais que o framework utilizado abstraia alguns dos desafios impostos pelo paradigma SMA. | Excelente |
 
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
 (i) Lições Aprendidas;
