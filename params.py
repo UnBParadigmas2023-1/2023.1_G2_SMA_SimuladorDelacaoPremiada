@@ -14,7 +14,7 @@ PRISIONERS_TYPES = {
 SIMULATION_PARAMS = {
     "num_agents": UserSettableParameter(
         "slider",
-        name="Quantidade de Agentes Vivos",
+        name="Quantidade de Agentes de cada tipo",
         value=200,
         min_value=100,
         max_value=300,
