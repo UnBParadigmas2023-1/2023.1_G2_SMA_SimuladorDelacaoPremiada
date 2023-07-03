@@ -11,6 +11,7 @@
 | 18/0108344 | Rafael Berto Pereira             |
 | 19/0016663 | Lucas Pimentel Quintão           |
 | 19/0044403 | Victor Souza Dantas Martins Lima |
+| 20/0017519 | Eurico Menezes de Abreu Neto     |
 
 ## Sobre
 
