@@ -46,7 +46,7 @@ Gifs animados e outras ilustrações são bem-vindos!
 1 - Clone este repositório em sua máquina local.<br>
 2 - Execute o arquivo principal main.py utilizando o interpretador Python.
 ```
-python simulation.py
+python main.py
 ````
 3 - Acompanhe a simulação em http://127.0.0.1:8521
 
