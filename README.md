@@ -13,6 +13,7 @@
 | 19/0044403 | Victor Souza Dantas Martins Lima |
 | 20/0017519 | Eurico Menezes de Abreu Neto     |
 | 19/0033088 | Lucas Braun Vieira Xavier        |
+| 19/0055201 | Matheus Calixto Vaz Pinheiro     |
 
 ## Sobre
 
@@ -87,6 +88,7 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | Lucas Braun | Minha maior contribuição foi no gráfico da razão de agentes autruístas a cada passo da simulação. Achei esse um paradigma interessante, e não tive dificuldades em entender e utilizar o framework MESA, principalmente por ser em Python, mas também por sua documentação não ser tão ruim e existirem diversos exemplos de uso na internet. | Boa |
 | Victor Lima| Atuei juntamente com o Lucas Pmientel e o Eurico Abreu na model do projeto, posteriormente atuei com o Lucas para realizar a modularização do projeto e adição dos botões que controlam o tamanho e do grid e a quantidade de agentes. Acredito que o trabalho foi bom para compreensão do paradigma e que o framework MESA facilitou bastante a implementação | Boa |
 | Gustavo Martins Ribeiro | Participação ativa das reuniões de definição de escopo e das reuniões de desenvolvimento; Auxilio geral e elaboração do Gráfico de Linhas contendo a porcentagem de autruistas em relação ao total de agentes. | Excelente |
+| Matheus Calixto Vaz Pinheiro | Minha participação no projeto foi no desenvolvimento dos Agentes em conjunto do Brenno e do Rafael. Gostei bastante do desenvolvimento pois pude aprender junto do Rafael e Brenno, pois entramos em call no discord e utilizamos o live share para que conseguissemos escrever o código paralelamente, isto também fez com que a todo momento os três se juntassem para pensar em como definir cada aspecto do código e o comportamento do mesmo. De inicio erramos colocando um tipo a mais de Agente o que fez com que o "Dilema do Priosioneiro" não fosse devidamente representado, mas após a retirada do mesmo tivemos uma ótima simulação. No mais achei o paradigma interessantíssimo e o uso do framework MESA muito bom por sua curva de aprendizagem baixa. | Boa | 
 
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
 (i) Lições Aprendidas;
