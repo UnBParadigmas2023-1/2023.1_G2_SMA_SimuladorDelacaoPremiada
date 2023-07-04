@@ -15,6 +15,7 @@
 | 19/0033088 | Lucas Braun Vieira Xavier        |
 | 19/0055201 | Matheus Calixto Vaz Pinheiro     |
 | 19/0027088 | Eliás Yousef Santana Ali         |
+| 19/0025379 | Brenno Oliveira Silva            |
 
 ## Sobre
 
@@ -69,21 +70,13 @@ python main.py
 
 ## Vídeo
 
-Adicione 1 ou mais vídeos com a execução do projeto.
-Procure:
-(i) Introduzir o projeto;
-(ii) Mostrar passo a passo o código, explicando-o, e deixando claro o que é de terceiros, e o que é contribuição real da equipe;
-(iii) Apresentar particularidades do Paradigma, da Linguagem, e das Tecnologias, e
-(iV) Apresentar lições aprendidas, contribuições, pendências, e ideias para trabalhos futuros.
-OBS: TODOS DEVEM PARTICIPAR, CONFERINDO PONTOS DE VISTA.
-TEMPO: +/- 15min
+[Video de Apresentação](https://youtu.be/OYH2gXKu9WE)
 
 ## Participações
 
-Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
-| Rafael Berto Pereira | Eu contribuí no desenvolvimento dos Agentes em conjunto com o Brenno e o Matheus. No começo senti dificuldade no uso do construtor dos agentes. Após essa dificuldade superada, ajudei a programar o comportamento dos agentes. Inicialmente tinha pensado em três comportamentos flexível, autruista e egoísta. Entretanto, com o tempo percebeu que o flexível sempre ganhava a longo prazo. Além disso não tinha como saber se ele ganhoou porque foi autruista ou egoista. Achei esse paradigma muito interessante ver que cada agente tinha um comportamento independente. Além disso, o uso do Framework MESA, em python, facilitou bastante a curva de aprendizado | Boa |
+| Rafael Berto Pereira | Eu contribuí no desenvolvimento dos Agentes em conjunto com o Brenno e o Matheus. No começo senti dificuldade no uso do construtor dos agentes. Após essa dificuldade superada, ajudei a programar o comportamento dos agentes. Inicialmente tinha pensado em três comportamentos flexível, autruista e egoísta. Entretanto, com o tempo percebeu que o flexível sempre ganhava a longo prazo. Além disso não tinha como saber se ele ganhou porque foi autruista ou egoista. Achei esse paradigma muito interessante ver que cada agente tinha um comportamento independente. Além disso, o uso do Framework MESA, em python, facilitou bastante a curva de aprendizado | Boa |
 |Lucas Pimentel | Ajudei a equipe na idealização do projeto e na pesquisa de base teórica para a realização dele. Além disso, atuei em conjunto com o Victor Lima e o Eurico Abreu na implementação da classe Model. Também consegui auxiliar no desenvolvimento do Agente em si, revisando a lógica implementada e fazendo algumas alterações. Acredito que este trabalho tenha sido de grande importância para a compreensão do paradigma, por mais que o framework utilizado abstraia alguns dos desafios impostos pelo paradigma SMA. | Excelente |
 | Eurico Abreu | Durante essa entrega contribui no código e na organização geral do projeto (reuniões, decisões do que fazer e etc). Relacionado ao código, trabalhei em conjunto com o Lucas Pimentel e com o Victor Lima, na implementação da classe Model. Foi um ótimo projeto para fixar e colocar em prática os conceitos do paradigma estudado. Gostaria de ter participado mais no projeto, no entanto devido a problemas de saúde não foi possível. | Boa |
 | Lucas Braun | Minha maior contribuição foi no gráfico da razão de agentes autruístas a cada passo da simulação. Achei esse um paradigma interessante, e não tive dificuldades em entender e utilizar o framework MESA, principalmente por ser em Python, mas também por sua documentação não ser tão ruim e existirem diversos exemplos de uso na internet. | Boa |
@@ -91,15 +84,10 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | Gustavo Martins Ribeiro | Participação ativa das reuniões de definição de escopo e das reuniões de desenvolvimento; Auxilio geral e elaboração do Gráfico de Linhas contendo a porcentagem de autruistas em relação ao total de agentes. | Excelente |
 | Matheus Calixto Vaz Pinheiro | Minha participação no projeto foi no desenvolvimento dos Agentes em conjunto do Brenno e do Rafael. Gostei bastante do desenvolvimento pois pude aprender junto do Rafael e Brenno, pois entramos em call no discord e utilizamos o live share para que conseguissemos escrever o código paralelamente, isto também fez com que a todo momento os três se juntassem para pensar em como definir cada aspecto do código e o comportamento do mesmo. De inicio erramos colocando um tipo a mais de Agente o que fez com que o "Dilema do Priosioneiro" não fosse devidamente representado, mas após a retirada do mesmo tivemos uma ótima simulação. No mais achei o paradigma interessantíssimo e o uso do framework MESA muito bom por sua curva de aprendizagem baixa. | Boa |
 | Eliás Yousef Santana Ali | Minha principal atuação, juntamente com o Gustavo e o Lucas Braun, foi na construção e elaboração do gráfico de linhas contendo a proporção entre autruistas e agentes totais, mas também tive participações para construir o raciocínio do funcionamento dos agentes. Acredito que o trabalho tenha sido fundamental para fixação de alguns conceitos do paradigma, mesmo utilizando o framework MESA, que abstrai muitos outros conceitos. | Boa |
+| Brenno Oliveira Silva | Participei do desenvolvimento dos Agentes em conjunto do Matheus e do Rafael. Durante a criação do agente foi possível testar diferentes abordagens para verificar o comportamento dele e seguir o dilema do prisioneiro de maneira mais próxima ao paradigma. Gostei do framework Mesa pela facilidade de uso, além de possuir uma documentação que explica direto ao ponto o que cada função faz. | Boa |
 
 ## Trabalhos Futuros
 Uma possível adição para o trabalho futuro seria implementar um terceiro agente flexível onde ele siga a estratégia da teoria dos jogos de "olho por olho, dente por dente", ou seja, esse agente imita a ação do outro (delatar ou negar). Além disso seria interessante indicar por qual motivo ele ganhou: ganhou por delatar o colega? ganhou por negar? Adicionalmente, qual deria o comportamento caso um agente flexivel encontrasse outro flexível?
-
-Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
-(i) Lições Aprendidas;
-(ii) Percepções;
-(iii) Contribuições e Fragilidades, e
-(iV) Trabalhos Futuros.
 
 ## Fontes
 
